@@ -305,7 +305,7 @@ namespace EPlast.WebApi
                 endpoints.MapControllers();
             });
 
-            CreateRoles(services).Wait();
+            //CreateRoles(services).Wait();
         }
         private async Task CreateRoles(IServiceProvider serviceProvider)
         {
