@@ -53,10 +53,26 @@ stages:
           
     - upload: manifests
       artifact: manifests
-
+- stage: SonarQube
+  displayName: SonarQube Analysis
+  jobs:  
+  - job: SonarQube
+    displayName: SonarQube
+    steps:
+    - task: SonarQubePrepare@4
+      inputs:
+        SonarQube: 'eplastsq'
+        scannerMode: 'MSBuild'
+        projectKey: 'EPlast_key'
+        projectName: 'EPlast'
+    - task: SonarQubeAnalyze@4
+    - task: SonarQubePublish@4
+      inputs:
+        pollingTimeoutSec: '300'
+        
 - stage: Deploy
   displayName: Deploy stage
-  dependsOn: Build
+  dependsOn: SonarQube
 
   jobs:
   - deployment: Deploy
