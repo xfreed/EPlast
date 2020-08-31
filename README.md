@@ -4,6 +4,7 @@
 <img src="https://github.com/IrynaZavushchak/EPlast/blob/master/EPlast/EPlast/wwwroot/images/homepage/ePlastLogotype.png"  width="150" height="150" />
 
 # 1. About the project
+
 **EPlast** is project to provide web-based multi-user system solution for digitize and automate Plast organization. The system makes it easy to access Plast's internal data, such as events, reports and document, etc. Information and location of their affiliates and clubs throughout Ukraine. Any interested person can join this system or become a full member of Plast.
 
 # 2. Main parts of the project and technologies.
